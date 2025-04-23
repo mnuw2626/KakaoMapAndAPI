@@ -301,7 +301,7 @@ const loadData = () => {
         // 경계 내 병원추가 함수 사용하여 병원 리스트 및 마커 추가
         addHospitalsInBounds(hospitals);
     };
-    xhr.open('GET', 'http://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList?serviceKey={공공데이터 사이트에서 일반 인증키(Encoding) 넣어주면 됨}&sidoCd=230000&numOfRows=1000');
+    xhr.open('GET', 'http://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList?serviceKey={공공데이터 사이트에서 일반 인증키(Encoding)부분을 넣어주면 됨}&sidoCd=230000&numOfRows=1000');
 
     xhr.send();
     showLoading();
