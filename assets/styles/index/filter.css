@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+#filter {
+    border-right: 0.0625em solid #e0e0e0;
+    flex-basis: 17.55rem;
+    overflow: auto;
+}
+
+#filter > .form {
+    padding: 1rem;
+    border-bottom: 0.0625em solid #e0e0e0;
+
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    justify-content: flex-start;
+}
+#filter > .form > .label {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: flex-start;
+
+}
+
+#filter > .form > .label > .text{
+    color: #818181;
+    font-size: 0.7rem;
+}
+
+#filter > .form > .label > .field {
+    background-color: #ffffff;
+    border: 0.0625em solid #e0e0e0;
+    border-radius: 0.25rem;
+    font: inherit;
+    outline: none;
+    padding: 0.375rem 0.5rem;
+}
+
+#filter > .form > .label > .field:hover {
+    border-color: #bdbdbd;
+}
+
+#filter > .form > .label > .field:focus {
+    border-color: #a0a0a0;
+}
+
+#filter > .form > .button {
+    background-color: #42a5f5;
+    border: none;
+    border-radius: 0.25rem;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0.5rem;
+    user-select: none;
+}
+#filter > .form > .button:hover {
+    background-color: #2196f3;
+}
+#filter > .form > .button:active {
+    background-color: #1e88e5;
+}
+
+#filter > .list {
+    list-style-type: none;
+    margin-block: 0;
+    margin-inline: 0;
+    padding-inline: 0;
+
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#filter > .list > .item {
+    border-bottom: 0.0625em solid #eeeeee;
+    padding: 1rem;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: flex-start;
+}
+#filter > .list > .item:hover {
+    background-color: #f5f5f5;
+}
+
+#filter > .list > .item > .name-wrapper {
+    cursor: pointer;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.375rem;
+    justify-content: flex-start;
+}
+#filter > .list > .item > .name-wrapper > .name {
+    color: #42a5f5;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+#filter > .list > .item > .name-wrapper > .category {
+    color: #a0a0a0;
+    font-size: 0.8rem;
+}
+
+#filter > .list > .item > .address {
+    font-size: 0.8rem;
+}
+
+#filter > .list > .item > .homepage{
+    word-break: break-all;
+}
+
+#filter > .list > .item > .contact,
+#filter > .list > .item > .homepage {
+    color: #757575;
+    font-size: 0.8rem;
+    text-decoration: none;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.375rem;
+    justify-content: flex-start;
+}
+
+#filter > .list > .item > .contact:hover,
+#filter > .list > .item > .homepage:hover {
+    color: #424242;
+}

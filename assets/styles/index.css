@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import "./index/filter.css";
+@import "./index/map.css";
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    color: #212121;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+
+    margin: 0;
+    overflow: hidden;
+
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/*    로딩 관련       */
+body > .loading {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1rem);
+    background-color: #212121a0;
+    position: fixed;
+    user-select: none;
+    z-index: 9;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 250ms;
+    transition-property: opacity;
+    transition-timing-function: ease;
+    user-select: none;
+}
+
+body > .loading.--visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes anim-image{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+body > .loading > .image{
+    top: 0.25rem;
+    width: 4rem;
+    animation-name: anim-image;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+    transition-duration: 250ms;
+    transition-property: top;
+    transition-timing-function: ease;
+}
+
+body > .loading.--visible > .image {
+    top: 0;
+}
+
+body > .loading > .text {
+    top: 0.25rem;
+    font-size: 1.25rem;
+    color: #ffffff;
+    opacity: 0;
+    position: relative;
+    transition-duration: 250ms;
+    transition-property: top, opacity;
+    transition-timing-function: ease;
+}
+
+body > .loading.--visible > .text {
+    opacity: 1;
+}
