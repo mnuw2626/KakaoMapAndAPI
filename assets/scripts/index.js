@@ -301,10 +301,8 @@ const loadData = () => {
         // 경계 내 병원추가 함수 사용하여 병원 리스트 및 마커 추가
         addHospitalsInBounds(hospitals);
     };
-    xhr.open('GET', 'http://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList?serviceKey=26tigEnuGJBO%2BMQY3%2FRqlTWryjR0qImQ1GLLjglg7%2FJ6Cpme1vEdBG%2BH5yJkw%2BPEwljti36DWZdJmq8Od810bQ%3D%3D&sidoCd=230000&numOfRows=1000');
+    xhr.open('GET', 'http://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList?serviceKey={공공데이터 사이트에서 일반 인증키(Encoding) 넣어주면 됨}&sidoCd=230000&numOfRows=1000');
 
-    // 학원 내에서 사용할 때
-    // xhr.open('GET', 'http://192.168.4.252:8080/B551182/hospInfoServicev2/getHospBasisList?serviceKey=26tigEnuGJBO%2BMQY3%2FRqlTWryjR0qImQ1GLLjglg7%2FJ6Cpme1vEdBG%2BH5yJkw%2BPEwljti36DWZdJmq8Od810bQ%3D%3D&sidoCd=230000');
     xhr.send();
     showLoading();
 };
